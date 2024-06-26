@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Verb Conjugation Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #4c91af;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #4c91af;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .examples {
+            margin: 20px 0;
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            background-color: #4c91af;
+        }
+        .tab {
+            flex-grow: 1;
+            padding: 1em;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+        }
+        .tab.active {
+            background-color: #367588;
+        }
+        .content {
+            display: none;
+        }
+        .content.active {
+            display: block;
+        }
+    </style>
+    <script>
+        function showTab(tabIndex) {
+            const contents = document.querySelectorAll('.content');
+            const tabs = document.querySelectorAll('.tab');
+            contents.forEach((content, index) => {
+                content.classList.toggle('active', index === tabIndex);
+            });
+            tabs.forEach((tab, index) => {
+                tab.classList.toggle('active', index === tabIndex);
+            });
+        }
+    </script>
+</head>
+<body onload="showTab(0)">
+
+<header>
+    <h1>Japanese Verb Conjugation Guide</h1>
+</header>
+
+<div class="tabs">
+    <div class="tab active" onclick="showTab(0)">Conjugation Table</div>
+    <div class="tab" onclick="showTab(1)">Ru-verbs (Ichidan verbs)</div>
+    <div class="tab" onclick="showTab(2)">U-verbs (Godan verbs)</div>
+    <div class="tab" onclick="showTab(3)">Irregular Verbs</div>
+</div>
+
+<div class="container">
+    <div class="content active">
+        <h2>Conjugation Table for Japanese Verbs</h2>
+        <table>
+            <tr>
+                <th>Verb Type</th>
+                <th>Dictionary Form</th>
+                <th>Past Tense</th>
+                <th>Present Negative</th>
+                <th>Past Negative</th>
+                <th>Te-form</th>
+            </tr>
+            <tr>
+                <td>Ru-verbs</td>
+                <td>-る</td>
+                <td>-た</td>
+                <td>-ない</td>
+                <td>-なかった</td>
+                <td>-て</td>
+            </tr>
+            <tr>
+                <td>U-verbs (う)</td>
+                <td>-う</td>
+                <td>-った</td>
+                <td>-わない</td>
+                <td>-わなかった</td>
+                <td>-って</td>
+            </tr>
+            <tr>
+                <td>U-verbs (つ)</td>
+                <td>-つ</td>
+                <td>-った</td>
+                <td>-たない</td>
+                <td>-たなかった</td>
+                <td>-って</td>
+            </tr>
+            <tr>
+                <td>U-verbs (る)</td>
+                <td>-る</td>
+                <td>-った</td>
+                <td>-らない</td>
+                <td>-らなかった</td>
+                <td>-って</td>
+            </tr>
+            <tr>
+                <td>U-verbs (む)</td>
+                <td>-む</td>
+                <td>-んだ</td>
+                <td>-まない</td>
+                <td>-まなかった</td>
+                <td>-んで</td>
+            </tr>
+            <tr>
+                <td>U-verbs (ぶ)</td>
+                <td>-ぶ</td>
+                <td>-んだ</td>
+                <td>-ばない</td>
+                <td>-ばなかった</td>
+                <td>-んで</td>
+            </tr>
+            <tr>
+                <td>U-verbs (ぬ)</td>
+                <td>-ぬ</td>
+                <td>-んだ</td>
+                <td>-なない</td>
+                <td>-ななかった</td>
+                <td>-んで</td>
+            </tr>
+            <tr>
+                <td>U-verbs (く)</td>
+                <td>-く</td>
+                <td>-いた</td>
+                <td>-かない</td>
+                <td>-かなかった</td>
+                <td>-いて</td>
+            </tr>
+            <tr>
+                <td>U-verbs (ぐ)</td>
+                <td>-ぐ</td>
+                <td>-いだ</td>
+                <td>-がない</td>
+                <td>-がなかった</td>
+                <td>-いで</td>
+            </tr>
+            <tr>
+                <td>U-verbs (す)</td>
+                <td>-す</td>
+                <td>-した</td>
+                <td>-さない</td>
+                <td>-さなかった</td>
+                <td>-して</td>
+            </tr>
+            <tr>
+                <td>Suru (する)</td>
+                <td>する</td>
+                <td>した</td>
+                <td>しない</td>
+                <td>しなかった</td>
+                <td>して</td>
+            </tr>
+            <tr>
+                <td>Kuru (くる)</td>
+                <td>くる</td>
+                <td>きた</td>
+                <td>こない</td>
+                <td>こなかった</td>
+                <td>きて</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="content">
+        <h2>Ru-verbs (Ichidan verbs)</h2>
+        <p><strong>食べる (taberu) - to eat</strong></p>
+        <ul>
+            <li>Dictionary Form: たべる (taberu)</li>
+            <li>Past Tense: たべた (tabeta)</li>
+            <li>Present Negative: たべない (tabenai)</li>
+            <li>Past Negative: たべなかった (tabenakatta)</li>
+            <li>Te-form: たべて (tabete)</li>
+        </ul>
+        <p><em>Example: 毎日朝ご飯を食べます。<br>(Mainichi asagohan o tabemasu.) - I eat breakfast every day.</em></p>
+    </div>
+
+    <div class="content">
+        <h2>U-verbs (Godan verbs)</h2>
+        <p><strong>飲む (nomu) - to drink</strong></p>
+        <ul>
+            <li>Dictionary Form: のむ (nomu)</li>
+            <li>Past Tense: のんだ (nonda)</li>
+            <li>Present Negative: のまない (nomanai)</li>
+            <li>Past Negative: のまなかった (nomanakatta)</li>
+            <li>Te-form: のんで (nonde)</li>
+        </ul>
+        <p><em>Example: 水を飲みます。<br>(Mizu o nomimasu.) - I drink water.</em></p>
+
+        <p><strong>行く (iku) - to go</strong></p>
+        <ul>
+            <li>Dictionary Form: いく (iku)</li>
+            <li>Past Tense: いった (itta)</li>
+            <li>Present Negative: いかない (ikanai)</li>
+            <li>Past Negative: いかなかった (ikanakatta)</li>
+            <li>Te-form: いって (itte)</li>
+        </ul>
+        <p><em>Example: 学校に行きます。<br>(Gakkou ni ikimasu.) - I go to school.</em></p>
+    </div>
+
+    <div class="content">
+        <h2>Irregular Verbs</h2>
+        <p><strong>する (suru) - to do</strong></p>
+        <ul>
+            <li>Dictionary Form: する (suru)</li>
+            <li>Past Tense: した (shita)</li>
+            <li>Present Negative: しない (shinai)</li>
+            <li>Past Negative: しなかった (shinakatta)</li>
+            <li>Te-form: して (shite)</li>
+        </ul>
+        <p><em>Example: 宿題をします。<br>(Shukudai o shimasu.) - I do my homework.</em></p>
+
+        <p><strong>くる (kuru) - to come</strong></p>
+        <ul>
+            <li>Dictionary Form: くる (kuru)</li>
+            <li>Past Tense: きた (kita)</li>
+            <li>Present Negative: こない (konai)</li>
+            <li>Past Negative: こなかった (konakatta)</li>
+            <li>Te-form: きて (kite)</li>
+        </ul>
+        <p><em>Example: 友達が来ます。<br>(Tomodachi ga kimasu.) - My friend is coming.</em></p>
+    </div>
+</div>
+
+</body>
+</html>
